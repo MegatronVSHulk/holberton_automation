@@ -1,0 +1,16 @@
+# Holberton initialization script
+# Type the name of the file you need to make.
+# The script will create a bare file with the bin/bash header.
+# You can add this with an alias="bash NAME" to easily create bare files and then initiate with emacs.
+# Definitely a potential time saver!
+export EXCLAM="!"
+echo "END to cancel"                                                                                                    
+echo "Enter filename: "                                                                                                
+read file_name                                                                                                          
+if [ "$file_name" == "END" ]; then                                                                                          
+    echo "Ending file initialization."                                                                                      
+    exit 1                                                                                                            
+else                                                                                                                            
+    echo -e "#$exc/bin/bash\n" >> $file_name                                                                                
+    chmod 777 $file_name                                                                                            
+fi
